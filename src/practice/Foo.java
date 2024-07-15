@@ -1,6 +1,7 @@
 package practice;
 
 import java.awt.*;
+import java.util.Arrays;
 
 public class Foo {
     public static void main(String[] args) {
@@ -34,6 +35,44 @@ public class Foo {
         System.out.println("pointA.x = " + pointA.x); // pointA.x = 0
 
         // Arrays
-        
+        int[] numbers = new int[3];
+        numbers[0] = 1;
+        numbers[1] = 2;
+        numbers[2] = 10;
+        System.out.println(Arrays.toString(numbers)); // [1, 2, 10]
+
+        int[] numbers2 = {0, 1, 2, 3, 4, 5};
+        System.out.println(numbers2.length); // 6
+
+        String[] names = new String[3];
+        names[1] = "Julia";
+        System.out.println(Arrays.toString(names)); // [null, Julia, null]
+        Arrays.fill(names, "placeholder");
+        System.out.println(Arrays.toString(names)); // [placeholder, placeholder, placeholder]
+
+        String[] people = {
+                "James",
+                "John",
+                "Cathy",
+                "Ben"
+        };
+        for (int i = 0; i < people.length; i++) {
+            System.out.println(people[i]);
+            /*
+                James
+                John
+                Cathy
+                Ben
+            */
+        }
+        for (String person: people) {
+            System.out.println(person);
+            /*
+                James
+                John
+                Cathy
+                Ben
+            */
+        }
     }
 }
